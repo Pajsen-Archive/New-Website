@@ -1,237 +1,394 @@
 <html>
-    <head>
-        <title>C: ~\root/pajsen/portfoilio</title>
-        <script async src="https://arc.io/widget.min.js#6xQhLyfu"></script>
-        <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700" rel="stylesheet" type="text/css" />
-        <meta charset="utf-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css" />
-        <link rel="stylesheet" href="https://pajsen.me/style.css" />
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@mdi/font@6.5.95/css/materialdesignicons.min.css" />
-        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous" />
-        <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
-        <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
-        <meta property="og:image" content="https://cdn.discordapp.com/avatars/510736807999307786/a_2c72b8005b10ef5ecdbdcdde1f391ba2.gif?size=4096" />
-        <meta name="theme-color" content="#2f3136" />
-        <nav class="navbar is-info" role="navigation" aria-label="main navigation">
-            <div class="navbar-brand">
-                <a class="navbar-item" href="/">
-                    <img src="https://media.discordapp.net/attachments/710711337667264512/918447443232845834/unknown.png?width=448&height=112" style="border-radius: 10px;" width="112" height="28" />
-                </a>
+  <head>
+    <title>C: ~\root/pajsen/portfoilio</title>
+    <script async src="https://arc.io/widget.min.js#6xQhLyfu"></script>
+    <link
+      href="https://fonts.googleapis.com/css?family=Lato:300,400,700"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@mdi/font@6.5.95/css/materialdesignicons.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.3.1/css/all.css"
+      integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU"
+      crossorigin="anonymous"
+    />
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
+    ></script>
+    <meta
+      property="og:image"
+      content="https://cdn.discordapp.com/avatars/510736807999307786/a_2c72b8005b10ef5ecdbdcdde1f391ba2.gif?size=4096"
+    />
+    <meta name="theme-color" content="#2f3136" />
+    <nav class="navbar is-info" role="navigation" aria-label="main navigation">
+      <div class="navbar-brand">
+        <a class="navbar-item" href="/">
+          <img
+            src="logo.svg"
+            style="border-radius: 10px"
+            width="112"
+            height="28"
+          />
+        </a>
 
-                <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
-                    <span aria-hidden="true"></span>
-                    <span aria-hidden="true"></span>
-                    <span aria-hidden="true"></span>
-                </a>
+        <a
+          role="button"
+          class="navbar-burger"
+          aria-label="menu"
+          aria-expanded="false"
+          data-target="navbarBasicExample"
+        >
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+        </a>
+      </div>
+
+      <div id="navbarBasicExample" class="navbar-menu">
+        <div class="navbar-start">
+          <a class="navbar-item"> Home </a>
+
+          <a class="navbar-item is-info" href="/projects"> Projects </a>
+
+          <div class="navbar-item has-dropdown is-hoverable">
+            <a class="navbar-link"> More </a>
+
+            <div class="navbar-dropdown">
+              <a class="navbar-item"> About </a>
+              <a
+                class="navbar-item"
+                onClick="popitup('https://pajsen.se/contact', 'Google')"
+              >
+                Contact
+              </a>
+              <hr class="navbar-divider" />
+              <a class="navbar-item"> Report an issue </a>
             </div>
-
-            <div id="navbarBasicExample" class="navbar-menu">
-                <div class="navbar-start">
-                    <a class="navbar-item">
-                        Home
-                    </a>
-
-                    <a class="navbar-item is-info" href="/projects">
-                        Projects
-                    </a>
-
-                    <div class="navbar-item has-dropdown is-hoverable">
-                        <a class="navbar-link">
-                            More
-                        </a>
-
-                        <div class="navbar-dropdown">
-                            <a class="navbar-item">
-                                About
-                            </a>
-                            <a class="navbar-item" onClick="popitup('https://pajsen.se/contact', 'Google')">
-                                Contact
-                            </a>
-                            <hr class="navbar-divider" />
-                            <a class="navbar-item">
-                                Report an issue
-                            </a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="navbar-end">
-                    <div class="navbar-item"></div>
-                </div>
-            </div>
-        </nav>
-    </head>
-
-    <body>
-        <h2 class="texttitles">Hello, I am a 15 year old developer and gamer from Skåne, Sweden. I love to work with commuity and future projects such as the NPPA (Nuclear Power Plant Achive Project) where I recreate power plants. Currently Chernobyl is done</h2>
-        <h2 class="texttitles">Languages</h2>
-        <div class="columns">
-            <div class="column">
-                <div class="card">
-                    <div class="card-content">
-                        <div class="media">
-                            <div class="media-left">
-                                <figure class="image is-48x48">
-                                    <img src="https://nodejs.dev/favicon-32x32.png?v=adbe265cf4d3f10447eb015f0951c53c" alt="Image" alt="Placeholder image" />
-                                </figure>
-                            </div>
-                            <div class="media-content">
-                                <p class="title is-4">NodeJS</p>
-                            </div>
-                        </div>
-
-                        <div class="content">
-                            I have used NodeJS for 4 years now and have used it for many projects. NodeJS is one of my goto languages as I know it in and out.
-                            <a href="#projects?language=nodejs">#NodeJS</a>
-                            <br />
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="column">
-                <div class="card">
-                    <div class="card-content">
-                        <div class="media">
-                            <div class="media-left">
-                                <figure class="image is-48x48">
-                                    <img src="https://www.python.org/static/favicon.ico" alt="Image" alt="Placeholder image" />
-                                </figure>
-                            </div>
-                            <div class="media-content">
-                                <p class="title is-4">Python</p>
-                            </div>
-                        </div>
-
-                        <div class="content">
-                            One of my first languages was Python. I am not the best at it but I still can use it without any problems. Top 5 favorite languages
-                            <a href="#projects?language=nodejs">#NodeJS</a>
-                            <br />
-                        </div>
-                    </div>
-                </div>
-            </div>
-            
-            
-            <div class="column">
-                <div class="card">
-                    <div class="card-content">
-                        <div class="media">
-                            <div class="media-left">
-                                <figure class="image is-48x48">
-                                    <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fstatic.cloud-boxloja.com%2Flojas%2Fwyfyg%2Fprodutos%2Fe3a5cbf1-f38e-4b2d-9263-d2216fd778f0.jpg&f=1&nofb=1" alt="Placeholder image" />
-                                </figure>
-                            </div>
-                            <div class="media-content">
-                                <p class="title is-4">C#</p>
-                            </div>
-                        </div>
-
-                        <div class="content">
-                            I use C# for games (Unity and no engine) and smaller projects. I've used C# for around 2 years now. I love it a lot as it's easy and fast (kinda)
-                            <a href="#projects?language=cs">#CSharp</a>
-                            <br />
-                        </div>
-                    </div>
-                </div>
-            </div>
-            
+          </div>
         </div>
-        <div class="columns"> 
-            
-             <div class="column">
-                <div class="card">
-                    <div class="card-content">
-                        <div class="media">
-                            <div class="media-left">
-                                <figure class="image is-48x48">
-                                    <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Flogodix.com%2Flogo%2F470287.jpg&f=1&nofb=1" style="border-radius: 10px;" alt="Placeholder image" />
-                                </figure>
-                            </div>
-                            <div class="media-content">
-                                <p class="title is-4">Web Frameworks</p>
-                            </div>
-                        </div>
-                            I use EJS, HTML, CSS, SASS, React, PUG and Browser Javascript. I have used Bluma, MDI, Ionicons and JQuery for this site
-                        <div class="content">
 
-                                <a href="#projects?type=web">#WebDevelopment</a>
-                            <br />
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-
-            
-            <div class="column">
-                <div class="card">
-                    <div class="card-content">
-                        <div class="media">
-                            <div class="media-left">
-                                <figure class="image is-48x48">
-                                    <img src="https://pngimg.com/uploads/mysql/mysql_PNG24.png" alt="Image" alt="Placeholder image" />
-                                </figure>
-                            </div>
-                            <div class="media-content">
-                                <p class="title is-4">SQL</p>
-                            </div>
-                        </div>
-
-                        <div class="content">
-                                I use SQL for my big projects as I love how it works, I started using SQL around 2 months ago but I will continue to use if from now on
-                            <a href="#projects?using=sql">#SQL</a>
-                            <br />
-                        </div>
-                    </div>
-                </div>
-            </div>
-            
-            
-            <div class="column">
-                <div class="card">
-                    <div class="card-content">
-                        <div class="media">
-                            <div class="media-left">
-                                <figure class="image is-48x48">
-                                    <img src="https://yt3.ggpht.com/a/AGF-l78qi1XuZt881j8EI8D-SiMXWucNjgpce0if4w=s900-c-k-c0xffffffff-no-rj-mo" alt="Image" alt="Placeholder image" />
-                                </figure>
-                            </div>
-                            <div class="media-content">
-                                <p class="title is-4">MongoDB</p>
-                            </div>
-                        </div>
-
-                        <div class="content">
-                                I have used MongoDB for bigger projects, but have switched to SQL. But I still use it for projects where I see it fits much better
-                            <a href="#projects?using=mongodb">#MongoDB</a>
-                            <br />
-                        </div>
-                    </div>
-                </div>
-            </div>
-            
-  
-            
+        <div class="navbar-end">
+          <div class="navbar-item"></div>
         </div>
-    </body>
+      </div>
+    </nav>
+  </head>
 
-    <style>
-        .texttitles {
-            margin-top: 20px;
-            margin-botton: 20px;
-            text-align: center;
-            text-transform: uppercase;
-            font-weight: 200;
-            color: #fff;
-            text-shadow: 0 0 90px #0fa, 0 0 100px #0fa, 0 0 150px #0fa;
-        }
-        .navbar {
-            margin-bottom: 30px;
-        }
-        .column {
-            margin-left: 15px;
-            margin-right: 15px;
-        }
-    </style>
+  <body>
+    <div class="Languages">
+      <h2 id="textTitles">Languages</h2>
+      <div class="columns">
+        <div class="column">
+          <div class="card">
+            <div class="card-content">
+              <div class="media">
+                <div class="media-left">
+                  <figure class="image is-48x48">
+                    <img
+                      src="https://nodejs.dev/favicon-32x32.png?v=adbe265cf4d3f10447eb015f0951c53c"
+                      alt="Image"
+                      alt="Placeholder image"
+                    />
+                  </figure>
+                </div>
+                <div class="media-content">
+                  <p class="title is-4">NodeJS</p>
+                </div>
+              </div>
+
+              <div class="content">
+                I have used NodeJS for 4 years now and have used it for many
+                projects. NodeJS is one of my goto languages as I know it in and
+                out.
+                <a href="#projects?language=nodejs">#NodeJS</a>
+                <br />
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="column">
+          <div class="card">
+            <div class="card-content">
+              <div class="media">
+                <div class="media-left">
+                  <figure class="image is-48x48">
+                    <img
+                      src="https://www.python.org/static/favicon.ico"
+                      alt="Image"
+                      alt="Placeholder image"
+                    />
+                  </figure>
+                </div>
+                <div class="media-content">
+                  <p class="title is-4">Python</p>
+                </div>
+              </div>
+
+              <div class="content">
+                One of my first languages was Python. I am not the best at it
+                but I still can use it without any problems. Top 5 favorite
+                languages
+                <a href="#projects?language=nodejs">#NodeJS</a>
+                <br />
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="column">
+          <div class="card">
+            <div class="card-content">
+              <div class="media">
+                <div class="media-left">
+                  <figure class="image is-48x48">
+                    <img
+                      src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fstatic.cloud-boxloja.com%2Flojas%2Fwyfyg%2Fprodutos%2Fe3a5cbf1-f38e-4b2d-9263-d2216fd778f0.jpg&f=1&nofb=1"
+                      alt="Placeholder image"
+                    />
+                  </figure>
+                </div>
+                <div class="media-content">
+                  <p class="title is-4">C#</p>
+                </div>
+              </div>
+
+              <div class="content">
+                I use C# for games (Unity and no engine) and smaller projects.
+                I've used C# since 2019. I love it a lot as it's
+                easy and fast (kinda)
+                <a href="#projects?language=cs">#CSharp</a>
+                <br />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="columns">
+        <div class="column">
+          <div class="card">
+            <div class="card-content">
+              <div class="media">
+                <div class="media-left">
+                  <figure class="image is-48x48">
+                    <img
+                      src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Flogodix.com%2Flogo%2F470287.jpg&f=1&nofb=1"
+                      style="border-radius: 10px"
+                      alt="Placeholder image"
+                    />
+                  </figure>
+                </div>
+                <div class="media-content">
+                  <p class="title is-4">Web Frameworks</p>
+                </div>
+              </div>
+              <div class="content">
+                I use EJS, HTML, CSS, React and NextJS. I have used Bluma, MDI,
+                Ionicons and JQuery for this site
+                <a href="#projects?type=web">#WebDevelopment</a>
+                <br />
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="column">
+          <div class="card">
+            <div class="card-content">
+              <div class="media">
+                <div class="media-left">
+                  <figure class="image is-48x48">
+                    <img
+                      src="https://pngimg.com/uploads/mysql/mysql_PNG24.png"
+                      alt="Image"
+                      alt="Placeholder image"
+                    />
+                  </figure>
+                </div>
+                <div class="media-content">
+                  <p class="title is-4">SQL</p>
+                </div>
+              </div>
+
+              <div class="content">
+                I use SQL for my big projects as I love how it works, I started
+                using SQL around 2 months ago but I will continue to use if from
+                now on
+                <a href="#projects?using=sql">#SQL</a>
+                <br />
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="column">
+          <div class="card">
+            <div class="card-content">
+              <div class="media">
+                <div class="media-left">
+                  <figure class="image is-48x48">
+                    <img
+                      src="https://yt3.ggpht.com/a/AGF-l78qi1XuZt881j8EI8D-SiMXWucNjgpce0if4w=s900-c-k-c0xffffffff-no-rj-mo"
+                      alt="Image"
+                      alt="Placeholder image"
+                    />
+                  </figure>
+                </div>
+                <div class="media-content">
+                  <p class="title is-4">MongoDB</p>
+                </div>
+              </div>
+
+              <div class="content">
+                I have used MongoDB for bigger projects, but have switched to
+                SQL. But I still use it for projects where I see it fits much
+                better
+                <a href="#projects?using=mongodb">#MongoDB</a>
+                <br />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="Projects">
+        <h2 id="textTitles">Projects (brief overview)</h2>
+        
+        <div class="column">
+            <div class="card">
+                <div class="card-content">
+                    <div class="media">
+                        <div class="media-left">
+                            <figure class="image is-48x48">
+                                <img
+                                    src="https://media.discordapp.net/attachments/710711337667264512/918479109649227776/unknown.png?width=499&height=499"
+                                    style="border-radius: 25%;"
+                                    alt="Placeholder image"
+                                />
+                            </figure>
+                        </div>
+                        <div class="media-content">
+                            <p class="title is-4">Globaler</p>
+                            <p class="subtitle is-6">Many places brought together.</p>
+                        </div>
+                    </div>
+
+                    <div class="content">
+                         Globaler is a cross-platfrom and guilds/groups systems that brings communities together.
+                        <a href="#">#closedsource</a> <a href="#">#discord</a> <a href="#">#cross-platform</a>
+                        <br />
+                        <time datetime="2021-11-14">14 Nov 2021</time>
+                    </div>
+                            <button class="button is-info is-medium is-fullwidth" onClick="window.open('https://pajsen.se/globaler', '_blank');"><span class="mdi mdi-home"></span></span>Website</button>
+                            <button class="button is-link is-medium is-fullwidth" onClick="window.open('https://pajsen.se/projects/globaler', '_blank');"><span class="mdi mdi-information"></span>Info</button>
+                </div>
+            </div>
+        </div>
+            
+        <div class="column">
+            <div class="card">
+                <div class="card-content">
+                    <div class="media">
+                        <div class="media-left">
+                            <figure class="image is-48x48">
+                                <img src="https://www.teller.ml/favicon.ico" style="border-radius: 25%;" alt="Placeholder image" />
+                            </figure>
+                        </div>
+                        <div class="media-content">
+                            <p class="title is-4">Teller</p>
+                            <p class="subtitle is-6">A chat system with many features</p>
+                        </div>
+                    </div>
+
+                    <div class="content">
+                        Teller is a chat system with many features such as custom themes, badges and much more. I am the co-owner and lead backend developer.
+                        <a href="#">#teller</a> <a href="#">#closedsource</a>
+                        <br />
+                        <time datetime="2020-12-15">15 Dec 2020</time>
+                    </div>
+                            <button class="button is-info is-medium is-fullwidth" onClick="window.open('https://teller.ml', '_blank');"><span class="mdi mdi-home"></span>Website</button>
+                            <button class="button is-link is-medium is-fullwidth" onClick="window.open('https://www.facebook.com/TellerDev', '_blank');"><span class="mdi mdi-facebook"></span>Facebook</button>
+
+                </div>
+            </div>
+        </div>
+        <div class="column">
+            <div class="card">
+                <div class="card-content">
+                    <div class="media">
+                        <div class="media-left">
+                            <figure class="image is-48x48">
+                                <img
+                                    src="https://images-ext-1.discordapp.net/external/hTOwFbcunV7JMJDtzEqy8r5NShjNfxuwaZB4w-ud3SQ/%3Fsize%3D4096/https/cdn.discordapp.com/avatars/747353451314544701/98bbad9c1086bbac1a4a7e3d50799679.png?width=96&height=96"
+                                    style="border-radius: 25%;"
+                                    alt="Placeholder image"
+                                />
+                            </figure>
+                        </div>
+                        <div class="media-content">
+                            <p class="title is-4">Cybercore</p>
+                            <p class="subtitle is-6">A full feature discord bot</p>
+                        </div>
+                    </div>
+
+                    <div class="content">
+                        Cybercore is a semi open source Discord bot powered by Discord.JS and <a href="https://sweplox.se" target="_blank">Sweplox</a>. Cybercore is one of my oldest still running projects and my first real Discord bot.
+                        <a href="#">#discord</a> <a href="#">#semiopensource</a>
+                        <br />
+                        <time datetime="2020-08-24">24 Aug 2020</time>
+                    </div>
+                            <button class="button is-info is-medium is-fullwidth" onClick="window.open('https://teller.ml', '_blank');"><span class="mdi mdi-home"></span>Website</button>
+                            <button class="button is-link is-medium is-fullwidth" onClick="window.open('https://www.facebook.com/TellerDev', '_blank');"><span class="mdi mdi-facebook"></span>Facebook</button>
+
+                </div>
+            </div>
+        </div>
+        <div class="column">
+            <div class="card">
+                <div class="card-content">
+                    <div class="media">
+                        <div class="media-left">
+                            <figure class="image is-48x48">
+                                <img
+                                    src="SmartMarkLogo01.jpg"
+                                    style="border-radius: 25%;"
+                                    alt="Placeholder image"
+                                />
+                            </figure>
+                        </div>
+                        <div class="media-content">
+                            <p class="title is-4">SmartMark</p>
+                            <p class="subtitle is-6">A smart and cheap system for keeping inventory</p>
+                        </div>
+                    </div>
+                    <div class="content">
+                        SmartMark is a inventory and library system that is cheap and easy to use. SmartMark uses NFC and RFID and a interface to keep track of inventory. So you can see who took what and when. In the future there will a warehouse function that will make it easy to keep track of where things are.
+                        <a href="#">#hardware</a> <a href="#">#closedsource</a>
+                        <br />
+                        <time datetime="2020-08-24">13 Aug 2022</time>
+                    </div>
+                            <button class="button is-info is-medium is-fullwidth" onClick="window.open('https://cybercore.software/smartmark', '_blank');"><span class="mdi mdi-home"></span>Website</button>
+                            <button class="button is-link is-medium is-fullwidth" onClick="window.open('https://github.com/SmartMark', '_blank');"><span class="mdi mdi-facebook"></span>Github</button>
+
+                </div>
+            </div>
+        </div>
+    </div>
+  </body>
 </html>

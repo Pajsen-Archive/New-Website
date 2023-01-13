@@ -1,7 +1,6 @@
 html {
   height: 100%;
   background: radial-gradient(ellipse at bottom, #1b2735 0%, #090a0f 100%);
-  overflow: hidden;
 }
 
 #title {
@@ -31,4 +30,31 @@ html {
   to {
     transform: translateY(-2000px);
   }
+}
+.texttitles {
+  margin-top: 20px;
+  margin-botton: 20px;
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: 200;
+  color: #fff;
+  text-shadow: 0 0 90px #0fa, 0 0 100px #0fa, 0 0 150px #0fa;
+}
+.navbar {
+  margin-bottom: 30px;
+}
+.column {
+  margin-left: 15px;
+  margin-right: 15px;
+}
+
+h2 {
+  font-size: 50px;
+  margin-top: 20px;
+  margin-botton: 20px;
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: 200;
+  color: #ffffff;
+  text-shadow: 0 0 90px #0fa, 0 0 100px #0fa, 0 0 150px #0fa;
 }
